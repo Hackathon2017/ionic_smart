@@ -62,11 +62,9 @@ export class LoginPage {
       this.toast.create(this.toastWrongLoginAndPassOptions).present(); 
     }else{
       var selet = this;
-      this.splashScreen.show();
       setTimeout( function(){
-        this.splashScreen.hide();
         selet.navCtrl.setRoot('TabsPage')
-      },3000);
+      },2000);
     }
   }
 
