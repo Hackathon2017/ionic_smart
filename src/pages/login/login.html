@@ -1,0 +1,34 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="navigation"> 
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <img src="assets/img/logoSlash.png" alt="logoSlash" class="logo">
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label floating>Login : </ion-label>
+        <ion-input type="text"  #loginn></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Password : </ion-label>
+        <ion-input type="password" #pass></ion-input>
+      </ion-item>
+    </ion-card-content>
+    <ion-row>
+      <button ion-button (click)="goToPage('RegisterPage')" color="secondary">Register</button>
+      <button ion-button (click)="login(loginn,pass)" color="primary">Login</button>
+    </ion-row>
+  </ion-card>
+</ion-content>
