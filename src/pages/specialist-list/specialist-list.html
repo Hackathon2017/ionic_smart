@@ -25,23 +25,22 @@
 
 
     <ion-item>
+      <ion-icon name='heart' item-start style="color: #55acee"></ion-icon>
+      note
+      <ion-badge item-end>9/10</ion-badge>
+    </ion-item>
+
+    <ion-item>
       <ion-icon name='phone-portrait' item-start style="color: #55acee"></ion-icon>
-      {{spec.phone}}
-      <ion-badge item-end>23270615</ion-badge>
+      téléphone
+      <ion-badge item-end>{{spec.phone}}</ion-badge>
     </ion-item>
 
     <ion-item>
       <ion-icon name='pin' item-start style="color: #55acee"></ion-icon>
-      {{spec.geocode}}
-      <ion-badge item-end>Rue 12 Mohamed 5</ion-badge>
+      adresse
+      <ion-badge item-end>{{spec.geocode}}</ion-badge>
     </ion-item>
-
-    <ion-item>
-      <ion-icon name='at' item-start style="color: #55acee"></ion-icon>
-      {{spec.about_website}}
-      <ion-badge item-end>site web</ion-badge>
-    </ion-item>
-
     <ion-row>
       <ion-col>
         <button ion-button clear small>

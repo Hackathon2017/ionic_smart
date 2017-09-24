@@ -9,4 +9,7 @@ export interface Message {
     avis: string;
     description: string;
     Specialist: Specialist;
+    ponctualite?:string; 
+    traitement?:string;
+    
 }

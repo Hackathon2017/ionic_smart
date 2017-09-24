@@ -7,12 +7,111 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>SpecialistDetailPage</ion-title>
+    <ion-title>specialist detail</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-card>
+
+    <ion-card-content>
+      <ion-card-title>
+        {{specialist.name}}
+      </ion-card-title>
+    </ion-card-content>
+
+
+    <ion-item>
+      <ion-icon name='heart' item-start style="color: #55acee"></ion-icon>
+      note
+      <ion-badge item-end>9/10</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='phone-portrait' item-start style="color: #55acee"></ion-icon>
+      téléphone
+      <ion-badge item-end>{{specialist.phone}}</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='pin' item-start style="color: #55acee"></ion-icon>
+      adresse
+      <ion-badge item-end>{{specialist.geocode}}</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='at' item-start style="color: #55acee"></ion-icon>
+      adresse
+      <ion-badge item-end>{{specialist.about_website}}</ion-badge>
+    </ion-item>
+
+    <ion-card-content>
+
+      <ion-item *ngFor="let comment of listComment">
+        <ion-icon name="person" item-start large></ion-icon>
+        <h2>
+          <Strong>{{comment.author}}</Strong>
+        </h2>
+         <div>
+          <Strong> ponctualité : </Strong>{{comment.ponctualite}} <br>
+        </div> 
+         <div>
+          <Strong> traitement : </Strong>{{comment.traitement}} <br>
+        </div> 
+
+        <Strong>commentaire : </Strong>{{comment.avis}}
+      </ion-item>
+
+
+    </ion-card-content>
+
+
+    <ion-card-content>
+      <ion-card-title>
+        Donner votre avis
+      </ion-card-title>
+      <ion-list>
+
+        <ion-item>
+          <ion-label floating>traitement</ion-label>
+          <ion-select [(ngModel)]="traitement">
+              <ion-option value=1>1</ion-option>
+              <ion-option value=2>2</ion-option>
+              <ion-option value=3>3</ion-option>
+              <ion-option value=4>4</ion-option>
+              <ion-option value=5>5</ion-option>
+              <ion-option value=6>6</ion-option>
+              <ion-option value=7>7</ion-option>
+              <ion-option value=8>8</ion-option>
+              <ion-option value=9>9</ion-option>
+              <ion-option value=10>10</ion-option>
+            </ion-select>
+        
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>ponctualite</ion-label>
+          <ion-input [(ngModel)]="commentaire" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>communication</ion-label>
+          <ion-input [(ngModel)]="commentaire" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>nom</ion-label>
+          <ion-input [(ngModel)]="commentaire" type="text"></ion-input>
+        </ion-item>
+
+      </ion-list>
+    </ion-card-content>
+
+
+
+
+  </ion-card>
 
 </ion-content>

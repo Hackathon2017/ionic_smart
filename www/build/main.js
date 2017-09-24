@@ -23,39 +23,43 @@ webpackEmptyAsyncContext.id = 108;
 var map = {
 	"../pages/contact/contact.module": [
 		268,
-		18
+		20
 	],
 	"../pages/home/home.module": [
 		269,
-		17
+		19
 	],
 	"../pages/list/list.module": [
 		270,
-		0
+		9
 	],
 	"../pages/login/login.module": [
 		271,
-		6
+		16
 	],
 	"../pages/profile/profile.module": [
 		272,
-		5
+		15
 	],
 	"../pages/register/register.module": [
 		273,
-		4
+		14
 	],
 	"../pages/specialist-detail/specialist-detail.module": [
 		286,
-		3
+		13
 	],
 	"../pages/specialist-list/specialist-list.module": [
 		284,
-		2
+		12
+	],
+	"../pages/specialities/specialities.module": [
+		288,
+		11
 	],
 	"../pages/tabs/tabs.module": [
 		274,
-		1
+		10
 	]
 };
 function webpackAsyncContext(req) {
@@ -210,12 +214,14 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__providers_user_service_user_service__ = __webpack_require__(265);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_message_service_message_service__ = __webpack_require__(266);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_rate_service_rate_service__ = __webpack_require__(267);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__providers_specialist_detail_service_specialist_detail_service__ = __webpack_require__(290);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -252,7 +258,8 @@ AppModule = __decorate([
                     { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/specialist-list/specialist-list.module#SpecialistListPageModule', name: 'SpecialistListPage', segment: 'specialist-list', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/specialist-detail/specialist-detail.module#SpecialistDetailPageModule', name: 'SpecialistDetailPage', segment: 'specialist-detail', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/specialist-detail/specialist-detail.module#SpecialistDetailPageModule', name: 'SpecialistDetailPage', segment: 'specialist-detail', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/specialities/specialities.module#SpecialitiesPageModule', name: 'SpecialitiesPage', segment: 'specialities', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
@@ -269,7 +276,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_9__providers_speciality_service_speciality_service__["a" /* SpecialityServiceProvider */],
             __WEBPACK_IMPORTED_MODULE_10__providers_user_service_user_service__["a" /* UserServiceProvider */],
             __WEBPACK_IMPORTED_MODULE_11__providers_message_service_message_service__["a" /* MessageServiceProvider */],
-            __WEBPACK_IMPORTED_MODULE_12__providers_rate_service_rate_service__["a" /* RateServiceProvider */]
+            __WEBPACK_IMPORTED_MODULE_12__providers_rate_service_rate_service__["a" /* RateServiceProvider */],
+            __WEBPACK_IMPORTED_MODULE_13__providers_specialist_detail_service_specialist_detail_service__["a" /* SpecialistDetailServiceProvider */]
         ]
     })
 ], AppModule);
@@ -491,6 +499,60 @@ RateServiceProvider = __decorate([
 ], RateServiceProvider);
 
 //# sourceMappingURL=rate-service.js.map
+
+/***/ }),
+
+/***/ 290:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SpecialistDetailServiceProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/*
+  Generated class for the SpecialistDetailServiceProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var SpecialistDetailServiceProvider = (function () {
+    function SpecialistDetailServiceProvider(http) {
+        this.http = http;
+        console.log('Hello SpecialistDetailServiceProvider Provider');
+    }
+    SpecialistDetailServiceProvider.prototype.load = function (Specialist) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'content-Type': 'application/json' });
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        var params = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["e" /* URLSearchParams */]();
+        params.set("specialist", "1");
+        options.search = params;
+        return this.http.get('http://172.16.3.223:8000/posts/', options).map(function (res) { return res.json(); });
+        //  let headers = new Headers({ 'content-Type': 'application/json' });
+        //let options = new RequestOptions({ headers: headers });
+        // return this.http.post("http://172.16.3.223:8000/posts/", JSON.stringify(Specialist), options)
+    };
+    return SpecialistDetailServiceProvider;
+}());
+SpecialistDetailServiceProvider = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+], SpecialistDetailServiceProvider);
+
+//# sourceMappingURL=specialist-detail-service.js.map
 
 /***/ })
 

@@ -12,6 +12,7 @@ import { SpecialityServiceProvider } from '../providers/speciality-service/speci
 import { UserServiceProvider } from '../providers/user-service/user-service';
 import { MessageServiceProvider } from '../providers/message-service/message-service';
 import { RateServiceProvider } from '../providers/rate-service/rate-service';
+import { SpecialistDetailServiceProvider } from '../providers/specialist-detail-service/specialist-detail-service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { RateServiceProvider } from '../providers/rate-service/rate-service';
     SpecialityServiceProvider,
     UserServiceProvider,
     MessageServiceProvider,
-    RateServiceProvider
+    RateServiceProvider,
+    SpecialistDetailServiceProvider
   ]
 })
 export class AppModule {}
