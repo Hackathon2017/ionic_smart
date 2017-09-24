@@ -3,10 +3,16 @@ page-home {
 }
 .header-img{
     height: 20%;
-    margin: auto;
+    margin: 0;
+    align : center;
 }
 
 .footer-img{
     height: 60%; 
     margin: auto;
+    align : center;
+}
+
+.main-page-wrapper-home{
+    max-height: 90%;
 }

@@ -1,7 +1,6 @@
 import { DomainServiceProvider } from './../../providers/domain-service/domain-service';
 import { Domain } from './../../models/domains/domain';
 import { Specialist } from './../../models/specialists/specialist';
-import { SpecialistServiceProvider } from './../../providers/specialist-service/specialist-service';
 import { Message } from './../../models/messages/message';
 import { MESSAGE_LIST } from './../../mocks/messages/messages';
 import { Component } from '@angular/core';
@@ -42,7 +41,7 @@ export class ListPage {
   specialists : Specialist[] = [];
   domains : Domain[] = [];
   messagesList : Message[] = MESSAGE_LIST;
-  constructor(private domainService : DomainServiceProvider ,private specialistService : SpecialistServiceProvider ,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private domainService : DomainServiceProvider ,public navCtrl: NavController, public navParams: NavParams) {
       this.loadDomains();
   }
 
@@ -54,14 +53,14 @@ export class ListPage {
   
     )
   }
-  loadSpecialists() {
+  /*loadSpecialists() {
     this.specialistService.load().subscribe(
       data => { 
         console.log(JSON.stringify(data));     
        this.specialists=data; 
       
     },err=>console.log(err)); 
-  }
+  }*/
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListPage');

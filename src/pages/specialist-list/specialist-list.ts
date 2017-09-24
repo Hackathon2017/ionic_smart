@@ -1,9 +1,8 @@
-import { Domain } from './../../models/domains/domain';
+import { Specialist } from './../../models/specialists/specialist';
 import { SpecialistServiceProvider } from './../../providers/specialist-service/specialist-service';
 import { Speciality } from './../../models/specialities/speciality';
-import { Specialist } from './../../models/specialists/specialist';
 import { Component } from '@angular/core';
-import { NavController, NavParams, IonicPage } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
  * Generated class for the SpecialistListPage page.
@@ -17,17 +16,11 @@ import { NavController, NavParams, IonicPage } from 'ionic-angular';
   selector: 'page-specialist-list',
   templateUrl: 'specialist-list.html',
 })
-const domain : Domain = {"id": 1, "about": "", "title": "","imagePath":""};
 export class SpecialistListPage {
-
+  speciality : Speciality;
   listSpecialist :Specialist[]= [];
-  
-  speciality : Speciality = {"id": 3,
-   "title": "", 
-   "imagePath": "", 
-   "domain": domain
-  };
-  constructor(public navCtrl: NavController, public navParams: NavParams, private specService : SpecialistServiceProvider ) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private specService : SpecialistServiceProvider) {
+
     this.speciality = this.navParams.get('spec');
     console.log(this.speciality);
     this.loadSpecialists(String(this.speciality.id));
@@ -44,12 +37,13 @@ export class SpecialistListPage {
       }
   
     )
+
   }
+
   public test(spec:Specialist){
     console.log(spec);
     this.navCtrl.push('SpecialistDetailPage',{
       specialist: spec
     })
   }
-
 }
