@@ -1,7 +1,7 @@
 import { Specialist } from './../../models/specialists/specialist';
 
 import { Injectable } from '@angular/core';
-import { Http, RequestOptions, Headers } from '@angular/http';
+import { Http, URLSearchParams, RequestOptions, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 /*
@@ -22,7 +22,9 @@ export class SpecialistServiceProvider {
   load() {
     let headers = new Headers({ 'content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
-    console.log(options)
+    let params: URLSearchParams = new URLSearchParams();
+    params.set("speciality","3" );
+    options.search = params; 
     return this.http.get('http://172.16.3.223:8000/specialists/', options).map(res => res.json())
 
   }

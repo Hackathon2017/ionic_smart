@@ -18,8 +18,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ListPage {
 
-  slides = [
-    {
+  slides = [];
+
+    /*{
       title: "Welcome to the Docs!",
       description: "The <b>Ionic Component Documentation</b> showcases a number of useful components that are included out of the box with Ionic.",
       image: "assets/img/appImg.png",
@@ -34,7 +35,8 @@ export class ListPage {
       description: "The <b>Ionic Cloud</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
       image: "assets/img/logoSlash.png",
     }
-  ];
+  ];*/
+
   specialists : Specialist[] = [];
   messagesList : Message[] = MESSAGE_LIST;
   constructor(private specialistService : SpecialistServiceProvider ,public navCtrl: NavController, public navParams: NavParams) {
@@ -44,7 +46,7 @@ export class ListPage {
   loadSpecialists() {
     this.specialistService.load().subscribe(
       data => { 
-        console.log(data);     
+        console.log(JSON.stringify(data));     
        this.specialists=data; 
       
     },err=>console.log(err)); 
