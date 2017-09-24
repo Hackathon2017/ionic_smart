@@ -66,6 +66,8 @@ var ProfilePage = (function () {
     function ProfilePage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.speciality = "";
+        this.specialities = ["speciality", "speciality2", "speciality3"];
     }
     ProfilePage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad ProfilePage');
@@ -75,7 +77,7 @@ var ProfilePage = (function () {
 ProfilePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-profile',template:/*ion-inline-start:"C:\Users\Sofrecom\Documents\hackathonApp\src\pages\profile\profile.html"*/'<!--\n  Generated template for the ProfilePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Profile</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Sofrecom\Documents\hackathonApp\src\pages\profile\profile.html"*/,
+        selector: 'page-profile',template:/*ion-inline-start:"C:\Users\Sofrecom\Documents\Ionic Sofrecom\ionic_smart\src\pages\profile\profile.html"*/'<!--\n\n  Generated template for the ProfilePage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  \n\n    <ion-navbar>\n\n      <ion-title>ajouter un specialiste</ion-title>\n\n    </ion-navbar>\n\n  \n\n  </ion-header>\n\n  \n\n  \n\n  <ion-content padding>\n\n    <ion-card>\n\n    <ion-list>\n\n  \n\n      <ion-item>\n\n        <ion-label floating>nom</ion-label>\n\n        <ion-input type="text"></ion-input>\n\n      </ion-item>\n\n  \n\n      <ion-item>\n\n        <ion-label floating>site web</ion-label>\n\n        <ion-input type="text"></ion-input>\n\n      </ion-item>\n\n  \n\n      <ion-item>\n\n        <ion-label floating>téléphone</ion-label>\n\n        <ion-input type="text"></ion-input>\n\n      </ion-item>\n\n      \n\n      <ion-item >\n\n        <ion-label floating>Spécialité</ion-label>\n\n        <ion-select [(ngModel)]="speciality" >\n\n          <ion-option *ngFor="let spec of specialities" [value] = "spec" >{{spec}}</ion-option>\n\n        </ion-select>\n\n      </ion-item>\n\n      <ion-item>\n\n        <ion-label floating>adresse</ion-label>\n\n        <ion-input type="text"></ion-input>\n\n      </ion-item>\n\n  \n\n    </ion-list>\n\n    <ion-row>\n\n      <button ion-button (click)="goToPage(\'RegisterPage\')" color="secondary">ajouter</button>\n\n    </ion-row>\n\n    </ion-card>\n\n  </ion-content>'/*ion-inline-end:"C:\Users\Sofrecom\Documents\Ionic Sofrecom\ionic_smart\src\pages\profile\profile.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
 ], ProfilePage);

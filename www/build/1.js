@@ -70,7 +70,7 @@ var TabsPage = (function () {
 TabsPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-tabs',template:/*ion-inline-start:"C:\Users\Sofrecom\Documents\hackathonApp\src\pages\tabs\tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="List" tabIcon="list"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Add" tabIcon="person-add"></ion-tab>\n  <ion-tab [root]="tab4Root" tabTitle="Contact" tabIcon="mail"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"C:\Users\Sofrecom\Documents\hackathonApp\src\pages\tabs\tabs.html"*/,
+        selector: 'page-tabs',template:/*ion-inline-start:"C:\Users\Sofrecom\Documents\Ionic Sofrecom\ionic_smart\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="List" tabIcon="list"></ion-tab>\n\n  <ion-tab [root]="tab3Root" tabTitle="Add" tabIcon="person-add"></ion-tab>\n\n  <ion-tab [root]="tab4Root" tabTitle="Contact" tabIcon="mail"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\Users\Sofrecom\Documents\Ionic Sofrecom\ionic_smart\src\pages\tabs\tabs.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
 ], TabsPage);

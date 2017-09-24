@@ -14,7 +14,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'profile.html',
 })
 export class ProfilePage {
-
+  private speciality:string="";
+  specialities:string[]=["speciality","speciality2","speciality3"];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
