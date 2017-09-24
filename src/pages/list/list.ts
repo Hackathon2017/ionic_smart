@@ -1,3 +1,5 @@
+import { Domain } from './../../models/domains/domain';
+import { DomainServiceProvider } from './../../providers/domain-service/domain-service';
 import { Specialist } from './../../models/specialists/specialist';
 import { SpecialistServiceProvider } from './../../providers/specialist-service/specialist-service';
 import { Message } from './../../models/messages/message';
@@ -38,11 +40,20 @@ export class ListPage {
   ];*/
 
   specialists : Specialist[] = [];
+  domains : Domain[] = [];
   messagesList : Message[] = MESSAGE_LIST;
-  constructor(private specialistService : SpecialistServiceProvider ,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private domainService : DomainServiceProvider ,private specialistService : SpecialistServiceProvider ,public navCtrl: NavController, public navParams: NavParams) {
     this.loadSpecialists();
+    this.loadDomains();
   }
 
+  loadDomains(){
+    this.domainService.load().subscribe(
+      data => {
+        this.domains = data;
+      }
+    )
+  }
   loadSpecialists() {
     this.specialistService.load().subscribe(
       data => { 
