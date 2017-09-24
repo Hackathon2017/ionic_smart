@@ -1,8 +1,8 @@
 export interface Specialist {
-    id : String;
+    id? : number;
     name : String;
     geocode : String;
     about_website : String;
     phone : String ;
-    speciality : String;
+    speciality : number;
 }

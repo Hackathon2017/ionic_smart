@@ -104,13 +104,19 @@ var SpecialistServiceProvider = (function () {
         console.log(options);
         return this.http.get('http://172.16.3.223:8000/specialists/', options).map(function (res) { return res.json(); });
     };
+    SpecialistServiceProvider.prototype.add = function (Specialist) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'content-Type': 'application/json' });
+        var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        return this.http.post("http://172.16.3.223:8000/specialists/" + '/users/add', JSON.stringify(Specialist), options);
+    };
     return SpecialistServiceProvider;
 }());
 SpecialistServiceProvider = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
 ], SpecialistServiceProvider);
 
+var _a;
 //# sourceMappingURL=specialist-service.js.map
 
 /***/ }),

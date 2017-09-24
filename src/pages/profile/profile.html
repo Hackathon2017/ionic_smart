@@ -19,33 +19,35 @@
   
       <ion-item>
         <ion-label floating>nom</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input [(ngModel)]="name" type="text"></ion-input>
       </ion-item>
   
       <ion-item>
         <ion-label floating>site web</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input [(ngModel)]="about_website" type="text"></ion-input>
       </ion-item>
   
       <ion-item>
         <ion-label floating>téléphone</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input [(ngModel)]="phone" type="text"></ion-input>
       </ion-item>
       
       <ion-item >
         <ion-label floating>Spécialité</ion-label>
         <ion-select [(ngModel)]="speciality" >
-          <ion-option *ngFor="let spec of specialities" [value] = "spec" >{{spec}}</ion-option>
+          <ion-option *ngFor="let spec of specialities" [value] = "spec.value" >{{spec.label}}</ion-option>
         </ion-select>
       </ion-item>
       <ion-item>
         <ion-label floating>adresse</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input [(ngModel)]="geocode" type="text"></ion-input>
       </ion-item>
   
     </ion-list>
     <ion-row>
-      <button ion-button (click)="goToPage('RegisterPage')" color="secondary">ajouter</button>
+      <button ion-button (click)="postSpecialist()" color="secondary">ajouter</button>
     </ion-row>
     </ion-card>
   </ion-content>
+
+  

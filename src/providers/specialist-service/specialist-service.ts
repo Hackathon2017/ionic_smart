@@ -27,4 +27,11 @@ export class SpecialistServiceProvider {
 
   }
 
+  add(Specialist:Specialist){
+    let headers = new Headers({ 'content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    return this.http.post("http://172.16.3.223:8000/specialists/" + '/users/add', JSON.stringify(Specialist), options)
+
+  }
+
 }
