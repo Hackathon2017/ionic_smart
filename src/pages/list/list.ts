@@ -1,5 +1,5 @@
-import { Domain } from './../../models/domains/domain';
 import { DomainServiceProvider } from './../../providers/domain-service/domain-service';
+import { Domain } from './../../models/domains/domain';
 import { Specialist } from './../../models/specialists/specialist';
 import { SpecialistServiceProvider } from './../../providers/specialist-service/specialist-service';
 import { Message } from './../../models/messages/message';
