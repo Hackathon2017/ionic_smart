@@ -1,3 +1,6 @@
+import { Domain } from './../../models/domains/domain';
+import { SpecialistServiceProvider } from './../../providers/specialist-service/specialist-service';
+import { Speciality } from './../../models/specialities/speciality';
 import { Specialist } from './../../models/specialists/specialist';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -14,47 +17,34 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-specialist-list',
   templateUrl: 'specialist-list.html',
 })
+const domain : Domain = {"id": 1, "about": "", "title": "","imagePath":""};
 export class SpecialistListPage {
 
-  listSpecialist :Specialist[]= [{
-    id: 1,
-    name: "ahmed",
-    geocode: "adresse 1",
-    about_website: "Special site 1",
-    phone: "1233333",
-    speciality: 1
-  },
-  {
-    id: 2,
-    name: "radhwan",
-    geocode: "adresse 2",
-    about_website: "Special site 2",
-    phone: "2222",
-    speciality: 1
-  },
-  {
-    id: 3,
-    name: "anis",
-    geocode: "adresse 3",
-    about_website: "Special site 3",
-    phone: "1233333",
-    speciality: 3
-  },
-  {id : 1,
-    name : "Zeineb",
-    geocode : "adresse 4",
-    about_website : "Special site 4",
-    phone : "1233333" ,
-    speciality : 4}
-  ]
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    console.log(this.listSpecialist);
+  listSpecialist :Specialist[]= [];
+  
+  speciality : Speciality = {"id": 3,
+   "title": "", 
+   "imagePath": "", 
+   "domain": domain
+  };
+  constructor(public navCtrl: NavController, public navParams: NavParams, private specService : SpecialistServiceProvider ) {
+    this.speciality = this.navParams.get('spec');
+    console.log(this.speciality);
+    this.loadSpecialists(String(this.speciality.id));
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SpecialistListPage');
   }
 
+  loadSpecialists(id : string){
+    this.specService.load(id).subscribe(
+      data => {
+        this.listSpecialist = data;
+      }
+  
+    )
+  }
   public test(spec:Specialist){
     console.log(spec);
     this.navCtrl.push('SpecialistDetailPage',{

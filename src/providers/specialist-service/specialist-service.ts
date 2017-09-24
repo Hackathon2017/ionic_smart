@@ -19,11 +19,11 @@ export class SpecialistServiceProvider {
   constructor(public http: Http) {
   }
 
-  load() {
+  load(id : string) {
     let headers = new Headers({ 'content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
     let params: URLSearchParams = new URLSearchParams();
-    params.set("speciality","3" );
+    params.set("speciality",id);
     options.search = params; 
     return this.http.get('http://172.16.3.223:8000/specialists/', options).map(res => res.json())
 

@@ -1,6 +1,6 @@
 export interface Domain {
-    id : Number;
+    id : number;
     title : string;
     about : string;
-    imagePath : String;
+    imagePath : string;
 }

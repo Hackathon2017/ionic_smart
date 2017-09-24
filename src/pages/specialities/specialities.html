@@ -7,12 +7,18 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>SpecialitiesPage</ion-title>
+    <ion-title>Specialities</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-list *ngFor="let speciality of specialities">
+    <ion-item (click)="getListOfSpecialists(speciality)">
+      <ion-thumbnail item-start>
+        <img [src]="speciality.imagePath">
+      </ion-thumbnail>
+      <h2>{{speciality.title}}</h2>
+    </ion-item>
+  </ion-list>
 </ion-content>
