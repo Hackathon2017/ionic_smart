@@ -12,12 +12,15 @@ export class TabsPage {
   tab2Root : String;
   tab3Root : String;
   tab4Root : String;
+  tab5Root : String;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.tab1Root = 'HomePage';
     this.tab2Root = 'ListPage';
     this.tab3Root = 'ProfilePage';
     this.tab4Root = 'ContactPage';
+    this.tab4Root = 'ContactPage';
+    this.tab5Root = 'SpecialistListPage';
 
   }
 

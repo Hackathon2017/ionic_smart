@@ -37,11 +37,11 @@ export class ProfilePage {
   }
 
   postSpecialist(){
-    this.specialist.name="this.name";
-    this.specialist.about_website="this.about_website";
-    this.specialist.phone="this.phone";
+    this.specialist.name=this.name;
+    this.specialist.about_website=this.about_website;
+    this.specialist.phone=this.phone;
     this.specialist.speciality=2;
-    this.specialist.geocode="this.geocode";
+    this.specialist.geocode=this.geocode;
     console.log(this.specialist);
     this.specialistService.add(this.specialist).subscribe(data=>console.log("ok"));
     

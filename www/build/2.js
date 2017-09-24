@@ -1,14 +1,14 @@
 webpackJsonp([2],{
 
-/***/ 273:
+/***/ 284:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterPageModule", function() { return RegisterPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SpecialistListPageModule", function() { return SpecialistListPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__specialist_list__ = __webpack_require__(285);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,31 +18,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var RegisterPageModule = (function () {
-    function RegisterPageModule() {
+var SpecialistListPageModule = (function () {
+    function SpecialistListPageModule() {
     }
-    return RegisterPageModule;
+    return SpecialistListPageModule;
 }());
-RegisterPageModule = __decorate([
+SpecialistListPageModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__register__["a" /* RegisterPage */],
+            __WEBPACK_IMPORTED_MODULE_2__specialist_list__["a" /* SpecialistListPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__register__["a" /* RegisterPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__specialist_list__["a" /* SpecialistListPage */]),
         ],
     })
-], RegisterPageModule);
+], SpecialistListPageModule);
 
-//# sourceMappingURL=register.module.js.map
+//# sourceMappingURL=specialist-list.module.js.map
 
 /***/ }),
 
-/***/ 282:
+/***/ 285:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SpecialistListPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(99);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -57,30 +57,68 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the RegisterPage page.
+ * Generated class for the SpecialistListPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var RegisterPage = (function () {
-    function RegisterPage(navCtrl, navParams) {
+var SpecialistListPage = (function () {
+    function SpecialistListPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.listSpecialist = [{
+                id: 1,
+                name: "ahmed",
+                geocode: "adresse 1",
+                about_website: "Special site 1",
+                phone: "1233333",
+                speciality: 1
+            },
+            {
+                id: 2,
+                name: "radhwan",
+                geocode: "adresse 2",
+                about_website: "Special site 2",
+                phone: "2222",
+                speciality: 1
+            },
+            {
+                id: 3,
+                name: "anis",
+                geocode: "adresse 3",
+                about_website: "Special site 3",
+                phone: "1233333",
+                speciality: 3
+            },
+            { id: 1,
+                name: "Zeineb",
+                geocode: "adresse 4",
+                about_website: "Special site 4",
+                phone: "1233333",
+                speciality: 4 }
+        ];
+        console.log(this.listSpecialist);
     }
-    RegisterPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad RegisterPage');
+    SpecialistListPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad SpecialistListPage');
     };
-    return RegisterPage;
+    SpecialistListPage.prototype.test = function (spec) {
+        console.log(spec);
+        this.navCtrl.push('SpecialistDetailPage', {
+            specialist: spec
+        });
+    };
+    return SpecialistListPage;
 }());
-RegisterPage = __decorate([
+SpecialistListPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-register',template:/*ion-inline-start:"C:\Users\Sofrecom\Documents\hackathonApp\src\pages\register\register.html"*/'<!--\n  Generated template for the RegisterPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Register</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <img src="assets/img/logoSlash.png" alt="logoSlash" class="logo">\n    <ion-card>\n      <ion-card-content>\n          <ion-item>\n              <ion-label floating>Full Name : </ion-label>\n              <ion-input type="text"></ion-input>\n          </ion-item>\n        <ion-item>\n          <ion-label floating>Login : </ion-label>\n          <ion-input type="text"></ion-input>\n        </ion-item>\n        <ion-item>\n          <ion-label floating>Password : </ion-label>\n          <ion-input type="password"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label floating>Confirm Password : </ion-label>\n            <ion-input type="password"></ion-input>\n          </ion-item>\n      </ion-card-content>\n      <ion-row>\n        <button ion-button color="secondary">Cancel</button>\n        <button ion-button color="primary">Submit</button>\n      </ion-row>\n    </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\Sofrecom\Documents\hackathonApp\src\pages\register\register.html"*/,
+        selector: 'page-specialist-list',template:/*ion-inline-start:"C:\Users\Sofrecom\Documents\Ionic Sofrecom\ionic_smart\src\pages\specialist-list\specialist-list.html"*/'<!--\n\n  Generated template for the SpecialistListPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>liste des spécialistes</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n  <ion-card *ngFor="let spec of listSpecialist" (click)="test(spec)">\n\n\n\n    <ion-card-content>\n\n      <ion-card-title>\n\n        {{spec.name}}\n\n      </ion-card-title>\n\n    </ion-card-content>\n\n\n\n\n\n    <ion-item>\n\n      <ion-icon name=\'phone-portrait\' item-start style="color: #55acee"></ion-icon>\n\n      {{spec.phone}}\n\n      <ion-badge item-end>23270615</ion-badge>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-icon name=\'pin\' item-start style="color: #55acee"></ion-icon>\n\n      {{spec.geocode}}\n\n      <ion-badge item-end>Rue 12 Mohamed 5</ion-badge>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-icon name=\'at\' item-start style="color: #55acee"></ion-icon>\n\n      {{spec.about_website}}\n\n      <ion-badge item-end>site web</ion-badge>\n\n    </ion-item>\n\n\n\n    <ion-row>\n\n      <ion-col>\n\n        <button ion-button clear small>\n\n            <ion-icon name="color-wandup"></ion-icon>\n\n            <div>plus de detail</div>\n\n          </button>\n\n      </ion-col>\n\n      \n\n    </ion-row>\n\n\n\n  </ion-card>\n\n\n\n\n\n</ion-content>'/*ion-inline-end:"C:\Users\Sofrecom\Documents\Ionic Sofrecom\ionic_smart\src\pages\specialist-list\specialist-list.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
-], RegisterPage);
+], SpecialistListPage);
 
-//# sourceMappingURL=register.js.map
+//# sourceMappingURL=specialist-list.js.map
 
 /***/ })
 

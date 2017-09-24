@@ -23,11 +23,11 @@ webpackEmptyAsyncContext.id = 108;
 var map = {
 	"../pages/contact/contact.module": [
 		268,
-		6
+		18
 	],
 	"../pages/home/home.module": [
 		269,
-		5
+		17
 	],
 	"../pages/list/list.module": [
 		270,
@@ -35,14 +35,22 @@ var map = {
 	],
 	"../pages/login/login.module": [
 		271,
-		4
+		6
 	],
 	"../pages/profile/profile.module": [
 		272,
-		3
+		5
 	],
 	"../pages/register/register.module": [
 		273,
+		4
+	],
+	"../pages/specialist-detail/specialist-detail.module": [
+		286,
+		3
+	],
+	"../pages/specialist-list/specialist-list.module": [
+		284,
 		2
 	],
 	"../pages/tabs/tabs.module": [
@@ -109,7 +117,7 @@ var SpecialistServiceProvider = (function () {
     SpecialistServiceProvider.prototype.add = function (Specialist) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'content-Type': 'application/json' });
         var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers });
-        return this.http.post("http://172.16.3.223:8000/specialists/" + '/users/add', JSON.stringify(Specialist), options);
+        return this.http.post("http://172.16.3.223:8000/specialists/", JSON.stringify(Specialist), options);
     };
     return SpecialistServiceProvider;
 }());
@@ -242,7 +250,9 @@ AppModule = __decorate([
                     { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] }
+                    { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/specialist-list/specialist-list.module#SpecialistListPageModule', name: 'SpecialistListPage', segment: 'specialist-list', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/specialist-detail/specialist-detail.module#SpecialistDetailPageModule', name: 'SpecialistDetailPage', segment: 'specialist-detail', priority: 'low', defaultHistory: [] }
                 ]
             })
         ],
@@ -303,7 +313,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\Users\Sofrecom\Documents\hackathonApp\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"C:\Users\Sofrecom\Documents\hackathonApp\src\app\app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\Users\Sofrecom\Documents\Ionic Sofrecom\ionic_smart\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"C:\Users\Sofrecom\Documents\Ionic Sofrecom\ionic_smart\src\app\app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
