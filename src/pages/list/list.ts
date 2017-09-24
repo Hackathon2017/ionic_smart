@@ -18,6 +18,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ListPage {
 
+  slides = [
+    {
+      title: "Welcome to the Docs!",
+      description: "The <b>Ionic Component Documentation</b> showcases a number of useful components that are included out of the box with Ionic.",
+      image: "assets/img/appImg.png",
+    },
+    {
+      title: "What is Ionic?",
+      description: "<b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.",
+      image: "assets/img/AppLogo.png",
+    },
+    {
+      title: "What is Ionic Cloud?",
+      description: "The <b>Ionic Cloud</b> is a cloud platform for managing and scaling Ionic apps with integrated services like push notifications, native builds, user auth, and live updating.",
+      image: "assets/img/logoSlash.png",
+    }
+  ];
   specialists : Specialist[] = [];
   messagesList : Message[] = MESSAGE_LIST;
   constructor(private specialistService : SpecialistServiceProvider ,public navCtrl: NavController, public navParams: NavParams) {

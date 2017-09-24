@@ -1,7 +1,7 @@
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Component } from '@angular/core';
 import { IonicPage, ToastController, ToastOptions, NavController } from 'ionic-angular';
-
+import { LoadingController } from 'ionic-angular';
 /**
  * Generated class for the LoginPage page.
  *
@@ -21,7 +21,7 @@ export class LoginPage {
   toastWrongLoginAndPassOptions : ToastOptions;
   toastSuccessLoginOptions : ToastOptions;
   splashScreen : SplashScreen;
-  constructor(private toast: ToastController, private navCtrl: NavController) {
+  constructor(private loginCntr : LoadingController,private toast: ToastController, private navCtrl: NavController) {
     
     this.toastEmptyUsernameOptions = {
       message : 'Empty Login',
@@ -53,7 +53,6 @@ export class LoginPage {
   login(login:any, pass:any){
     var username = login.value;
     var password = pass.value;
-
     if(username == "" ){
       this.toast.create(this.toastEmptyUsernameOptions).present();
     } else if (password == ""){
@@ -61,10 +60,15 @@ export class LoginPage {
     }else if(username != "admin" || password != "admin"){
       this.toast.create(this.toastWrongLoginAndPassOptions).present(); 
     }else{
+      let loader = this.loginCntr.create({
+        content: "Please wait...",
+        duration: 3000
+      });
+      loader.present();
       var selet = this;
       setTimeout( function(){
         selet.navCtrl.setRoot('TabsPage')
-      },2000);
+      },3000);
     }
   }
 

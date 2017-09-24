@@ -59,6 +59,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 /**
  * Generated class for the LoginPage page.
  *
@@ -66,7 +67,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var LoginPage = (function () {
-    function LoginPage(toast, navCtrl) {
+    function LoginPage(loginCntr, toast, navCtrl) {
+        this.loginCntr = loginCntr;
         this.toast = toast;
         this.navCtrl = navCtrl;
         this.toastEmptyUsernameOptions = {
@@ -105,10 +107,15 @@ var LoginPage = (function () {
             this.toast.create(this.toastWrongLoginAndPassOptions).present();
         }
         else {
+            var loader = this.loginCntr.create({
+                content: "Please wait...",
+                duration: 3000
+            });
+            loader.present();
             var selet = this;
             setTimeout(function () {
                 selet.navCtrl.setRoot('TabsPage');
-            }, 2000);
+            }, 3000);
         }
     };
     return LoginPage;
@@ -118,7 +125,7 @@ LoginPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
         selector: 'page-login',template:/*ion-inline-start:"C:\Users\Sofrecom\Documents\hackathonApp\src\pages\login\login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="navigation"> \n    <ion-title>Login</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <img src="assets/img/logoSlash.png" alt="logoSlash" class="logo">\n  <ion-card>\n    <ion-card-content>\n      <ion-item>\n        <ion-label floating>Login : </ion-label>\n        <ion-input type="text"  #loginn></ion-input>\n      </ion-item>\n      <ion-item>\n        <ion-label floating>Password : </ion-label>\n        <ion-input type="password" #pass></ion-input>\n      </ion-item>\n    </ion-card-content>\n    <ion-row>\n      <button ion-button (click)="goToPage(\'RegisterPage\')" color="secondary">Register</button>\n      <button ion-button (click)="login(loginn,pass)" color="primary">Login</button>\n    </ion-row>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Sofrecom\Documents\hackathonApp\src\pages\login\login.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
 ], LoginPage);
 
 //# sourceMappingURL=login.js.map
