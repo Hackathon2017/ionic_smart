@@ -16,18 +16,17 @@
 <ion-content padding>
 
   <ion-slides pager>
-    <ion-slide *ngFor="let slide of slides" class="max-height-90">
+    <ion-slide *ngFor="let slide of domains" class="max-height-90">
       <ion-toolbar>
         <ion-buttons end>
           <button ion-button color="primary">Next</button>
         </ion-buttons>
       </ion-toolbar>
-      <img [src]="slide.image" class="slide-image"/>
+      <img [src]="slide.imagePath" class="slide-image"/>
       <h2 class="slide-title" [innerHTML]="slide.title"></h2>
-      <p [innerHTML]="slide.description" class="slide-description"></p>
-      <button ion-button large clear icon-end color="primary" class="slide-button">
-        Shown specialities
-        <ion-icon name="arrow-forward"></ion-icon>
+      <p [innerHTML]="slide.about" class="slide-description"></p>
+      <button ion-button large clear color="primary" class="slide-button" (click)=goToSpecialitiesPage(slide)>
+        voir specialités
       </button>
     </ion-slide>
   </ion-slides>

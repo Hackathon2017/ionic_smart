@@ -1,6 +1,6 @@
-import { Speciality } from './../specialities/speciality';
 export interface Domain {
+    id : Number;
     title : string;
-    specialities? : Speciality[];
     about : string;
+    imagePath : String;
 }

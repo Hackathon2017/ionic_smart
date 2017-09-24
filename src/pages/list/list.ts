@@ -43,8 +43,7 @@ export class ListPage {
   domains : Domain[] = [];
   messagesList : Message[] = MESSAGE_LIST;
   constructor(private domainService : DomainServiceProvider ,private specialistService : SpecialistServiceProvider ,public navCtrl: NavController, public navParams: NavParams) {
-    this.loadSpecialists();
-    this.loadDomains();
+      this.loadDomains();
   }
 
   loadDomains(){
@@ -52,6 +51,7 @@ export class ListPage {
       data => {
         this.domains = data;
       }
+  
     )
   }
   loadSpecialists() {
@@ -67,4 +67,7 @@ export class ListPage {
     console.log('ionViewDidLoad ListPage');
   }
 
+  goToSpecialitiesPage(domain : Domain){
+    this.navCtrl.push('SpecialitiesPage',{domainID : domain});
+  }
 }
