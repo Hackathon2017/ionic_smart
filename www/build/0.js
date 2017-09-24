@@ -121,12 +121,12 @@ ListPage = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MESSAGE_LIST; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mocks_specialists_specialists__ = __webpack_require__(274);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__specialists_specialists__ = __webpack_require__(274);
 
-var specialists = __WEBPACK_IMPORTED_MODULE_0__mocks_specialists_specialists__["a" /* SPECIALIST_LIST */];
+var specialists = __WEBPACK_IMPORTED_MODULE_0__specialists_specialists__["a" /* SPECIALIST_LIST */];
 var messagesList = [];
 specialists.forEach(function (specialist) {
-    messagesList.push({ specialist: specialist });
+    //messagesList.push()
 });
 var MESSAGE_LIST = messagesList;
 //# sourceMappingURL=messages.js.map
