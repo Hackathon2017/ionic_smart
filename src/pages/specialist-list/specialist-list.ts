@@ -3,7 +3,7 @@ import { SpecialistServiceProvider } from './../../providers/specialist-service/
 import { Speciality } from './../../models/specialities/speciality';
 import { Specialist } from './../../models/specialists/specialist';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, IonicPage } from 'ionic-angular';
 
 /**
  * Generated class for the SpecialistListPage page.
