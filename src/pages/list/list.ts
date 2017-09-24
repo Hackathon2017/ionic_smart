@@ -26,10 +26,11 @@ export class ListPage {
 
   loadSpecialists() {
     this.specialistService.load().subscribe(
-      data => { console.log(data);     
+      data => { 
+        console.log(data);     
        this.specialists=data; 
       
-    },err=>console.log('error in loadSpecialits')); 
+    },err=>console.log(err)); 
   }
 
   ionViewDidLoad() {

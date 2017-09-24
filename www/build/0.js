@@ -80,7 +80,7 @@ var ListPage = (function () {
         this.specialistService.load().subscribe(function (data) {
             console.log(data);
             _this.specialists = data;
-        }, function (err) { return console.log('error in loadSpecialits'); });
+        }, function (err) { return console.log(err); });
     };
     ListPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad ListPage');
@@ -92,9 +92,10 @@ ListPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["n" /* Component */])({
         selector: 'page-list',template:/*ion-inline-start:"C:\Users\Sofrecom\Documents\hackathonApp\src\pages\list\list.html"*/'<!--\n  Generated template for the ListPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>List</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-list>\n    <ion-item *ngFor="let specialist of specialists">\n      <ion-avatar item-left>\n          <img src="assets/img/appLogo.png" alt="avatar">\n      </ion-avatar>\n      <h2>{{specialist.id}}</h2>\n      <p>{{specialist.name}}</p>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Users\Sofrecom\Documents\hackathonApp\src\pages\list\list.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__providers_specialist_service_specialist_service__["a" /* SpecialistServiceProvider */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["g" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__providers_specialist_service_specialist_service__["a" /* SpecialistServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__providers_specialist_service_specialist_service__["a" /* SpecialistServiceProvider */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["f" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["g" /* NavParams */]) === "function" && _c || Object])
 ], ListPage);
 
+var _a, _b, _c;
 //# sourceMappingURL=list.js.map
 
 /***/ }),
